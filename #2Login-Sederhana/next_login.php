@@ -8,10 +8,10 @@ $query = mysql_query("SELECT * FROM login WHERE username='$username' AND passwor
 $cek = mysql_num_rows($query);
 if ($cek >0) {
 	$data = mysql_fetch_array($login);
-	if ($data['level']=="admin") {
+
 		header("location:halaman_admin.php"); //jika username dan password benar makan akan dialihkan ke halaman halaman_admin.php
 	} else {
 		header("location:halaman_gagal.php");//jika username dan password salah makan akan dialihkan ke halaman halaman_gagal.php
 	}
-}
+
 ?>
